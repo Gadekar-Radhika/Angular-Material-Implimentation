@@ -1,0 +1,24 @@
+<p>
+  form works!
+</p>
+<div class="example-container">
+    <mat-spinner style="position: absolute; top:10%; left:45%;" *ngIf='wait'></mat-spinner>
+
+  <form>  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Amount" type="number" class="example-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <span matSuffix>.00</span>
+  </mat-form-field>
+  <mat-icon class="icon">home</mat-icon>
+  <mat-icon>create</mat-icon>
+  <mat-icon>save</mat-icon>
+  <mat-icon>delete</mat-icon>
+</form>
+<button mat-raised-button type="submit" color="accent" (click)="submit()">submit</button>
+</div>
+
